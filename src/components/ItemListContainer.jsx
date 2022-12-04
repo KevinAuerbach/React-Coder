@@ -27,7 +27,6 @@ const ItemListContainer = () => {
     return (
         <div className="container mt-5">
             <ItemList productos={productos}/>
-            <ItemCount stock={10}/>
         </div>
     )
 }
