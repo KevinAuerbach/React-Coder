@@ -21,7 +21,7 @@
         "precio":400000, 
         "imagen":"https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_35142_Placa_de_Video_MSI_GeForce_RTX_3080_Ti_12GB_GDDR6X_SUPRIM_X_5724f97e-grn.jpg", 
         "categoria":"componentes",
-        "stock":1
+        "stock":5
     },
     {
         "id":4, 
@@ -29,7 +29,7 @@
         "precio":273000, 
         "imagen":"https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_35007_Placa_de_Video_Zotac_GeForce_RTX_3080_Ti_12GB_GDDR6X_Trinity_5274aba0-grn.jpg", 
         "categoria":"componentes",
-        "stock":2
+        "stock":7
     },
     {
         "id":5, 

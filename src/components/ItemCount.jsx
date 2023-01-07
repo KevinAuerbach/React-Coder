@@ -1,8 +1,11 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
+import { Link } from "react-router-dom";
 
-const ItemCount = ({stock}) => {
+const ItemCount = ({stock, onAdd}) => {
 
     const [contador, setContador] = useState(1);
+    const [itemStock, setItemStock] = useState(stock)
+    const [vendido, setVendido] = useState(false)
 
     const bajarContador = () => {
         if(contador > 1) {
@@ -11,25 +14,33 @@ const ItemCount = ({stock}) => {
     }
 
     const subirContador = () => {
-        if(contador < stock) {
+        if(contador < itemStock) {
             setContador(contador + 1)
         }
     }
 
-    const onAdd = () => {
-        if(stock > 0) {
-            alert("Agregaste " + contador + " productos al carrito")
+    const addToCart = (quantity) => {
+        if(contador <= itemStock) {
+            setContador(1)
+        setItemStock(itemStock - quantity)
+        setVendido(true)
+        onAdd(quantity)
         }
     }
+
+    useEffect(() => {
+        setItemStock(stock)
+    }, [stock])
 
     return (
         <div className="container">
             <div className="btn-group mx-2" role="group" aria-label="Basic outlined example">
-                <button type="button" className="btn btn-outline-primary" onClick={bajarContador}>-</button>
+                <button type="button" className="btn btn-outline-danger" onClick={bajarContador}>-</button>
                 <button type="button" className="btn">{contador}</button>
-                <button type="button" className="btn btn-outline-primary" onClick={subirContador}>+</button>
+                <button type="button" className="btn btn-outline-success" onClick={subirContador}>+</button>
             </div>
-            <button type="button" className="btn btn-success" onClick={onAdd}>Agregar al carrito</button>
+            {vendido ? <Link to={"/cart"} className= "btn btn-success">Finalizar Compra</Link> :
+            <button type="button" className="btn btn-success" onClick={() => addToCart(contador)}>Agregar al carrito</button>}
         </div>
     )
 };
