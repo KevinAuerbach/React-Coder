@@ -1,4 +1,4 @@
-### Proyecto Final Curso React JS Coderhouse
+# Proyecto Final Curso React JS Coderhouse
 
 > Simulacion de una app e-commerce de venta de productos informaticos.
 
