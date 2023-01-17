@@ -1,3 +1,11 @@
+### Proyecto Final Curso React JS Coderhouse
+
+> Simulacion de una app e-commerce de venta de productos informaticos.
+
+## Firebase y Bootstrap
+
+> En la app utilice Bootstrap como framework de CSS y Firestore para simular la base de datos.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
